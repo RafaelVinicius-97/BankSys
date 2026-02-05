@@ -8,11 +8,11 @@ public class ContaBancaria
     public ContaBancaria()
     { }
 
-    public ContaBancaria(string nomeTitular, string documentoTitular, decimal? saldo)
+    public ContaBancaria(string nomeTitular, string documentoTitular, decimal saldo)
     {
         NomeTitular = nomeTitular;
         DocumentoTitular = documentoTitular;
-        Saldo = saldo.HasValue ? saldo.Value + 1000M : 1000M;
+        Saldo += (1000M + saldo);
     }
 
     public Guid Id { get; private set; } = Guid.NewGuid();
@@ -20,7 +20,7 @@ public class ContaBancaria
     public EnumStatusContaBancaria Status { get; private set; } = EnumStatusContaBancaria.Ativa;
     public string NomeTitular { get; private set; }
     public string DocumentoTitular { get; private set; }
-    public decimal Saldo { get; private set; } = 1000M;
+    public decimal Saldo { get; private set; } = decimal.Zero;
 
     public void InativarConta()
     {

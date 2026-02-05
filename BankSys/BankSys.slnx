@@ -10,4 +10,7 @@
   <Folder Name="/src/Infra/">
     <Project Path="BankSys.Persistence/BankSys.Persistence.csproj" />
   </Folder>
+  <Folder Name="/test/">
+    <Project Path="BankSys.Tests/BankSys.Tests.csproj" Id="75e7597a-0ad2-4ccf-9777-338000bd71b0" />
+  </Folder>
 </Solution>

@@ -3,9 +3,9 @@
 public record CriarContaBancariaDto(
     string NomeTitular,
     string DocumentoTitular,
-    decimal? Saldo)
+    decimal Saldo)
 {
-    public CriarContaBancariaDto() : this(string.Empty, string.Empty, null)
+    public CriarContaBancariaDto() : this(string.Empty, string.Empty, decimal.Zero)
     {
     }
 }
