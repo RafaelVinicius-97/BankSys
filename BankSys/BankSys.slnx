@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Api/">
+    <Project Path="BankSys.Api/BankSys.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Core/">
+    <Project Path="BankSys.Application/BankSys.Application.csproj" />
+    <Project Path="BankSys.Domain/BankSys.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infra/">
+    <Project Path="BankSys.Persistence/BankSys.Persistence.csproj" />
+  </Folder>
+</Solution>
