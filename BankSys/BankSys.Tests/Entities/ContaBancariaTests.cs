@@ -15,7 +15,7 @@ public class ContaBancariaTests
         var documento = "12345678900";
 
         // Act
-        var conta = new ContaBancaria(nome, documento, 0);
+        var conta = new ContaBancaria(nome, documento, decimal.Zero);
 
         // Assert
         conta.NomeTitular.Should().Be(nome);

@@ -11,7 +11,10 @@ public class CriarContaBancariaValidator : AbstractValidator<CriarContaBancariaD
             .NotEmpty().WithMessage("O nome do titular é obrigatório.");
         RuleFor(x => x.DocumentoTitular)
             .NotEmpty().WithMessage("O documento do titular é obrigatório.");
-        RuleFor(x => x.Saldo)
+        When(x => x.Saldo < decimal.Zero, () =>
+        {
+            RuleFor(x => x.Saldo)
             .GreaterThan(0).WithMessage("O saldo deve ser maior que zero.");
+        });
     }
 }

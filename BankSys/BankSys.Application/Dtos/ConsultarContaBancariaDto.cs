@@ -12,7 +12,7 @@ public record ConsultarContaBancariaDto(
 )
 {
     public ConsultarContaBancariaDto()
-        : this(string.Empty, string.Empty, 0m, default, default)
+        : this(string.Empty, string.Empty, decimal.Zero, default, default)
     {
     }
 }

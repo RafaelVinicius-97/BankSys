@@ -29,7 +29,7 @@ public class ContaBancariaService : IContaBancariaService
         if (_repository.TitularPossuiContaBancariaComEsseDocumento(dto.DocumentoTitular))
             throw new ContaBancariaException("Titular já possui conta com esse documento");
 
-        var contaCadastrada = _repository.CriarConta(new(dto.NomeTitular, dto.DocumentoTitular, dto.Saldo));
+        var contaCadastrada = _repository.CriarConta(new(dto.NomeTitular, dto.DocumentoTitular, dto.Saldo ?? decimal.Zero));
         _uoW.SaveChanges();
 
         return contaCadastrada.ConvertToCriarContaBancariaDto();

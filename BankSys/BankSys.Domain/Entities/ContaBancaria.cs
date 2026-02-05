@@ -8,11 +8,11 @@ public class ContaBancaria
     public ContaBancaria()
     { }
 
-    public ContaBancaria(string nomeTitular, string documentoTitular, decimal saldo)
+    public ContaBancaria(string nomeTitular, string documentoTitular, decimal? saldo)
     {
         NomeTitular = nomeTitular;
         DocumentoTitular = documentoTitular;
-        Saldo += (1000M + saldo);
+        Saldo += (saldo ?? decimal.Zero) + 1000M;
     }
 
     public Guid Id { get; private set; } = Guid.NewGuid();
