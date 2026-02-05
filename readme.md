@@ -2,13 +2,13 @@
 
 ## Descrição
 A **BankSys API** é uma API REST desenvolvida em **.NET**, com foco em boas práticas de arquitetura, organização de código e clareza de responsabilidades.  
-O projeto simula operações bancárias básicas, como criação de contas e transferências, servindo como um **case técnico** para demonstrar conhecimentos em backend, Entity Framework Core, SQL Server, Docker e Arquitetura Limpa.
+O projeto simula operações bancárias básicas, como criação de contas e transferências.
 
 ## Documentação para consumo da API
 A API disponibiliza sua documentação interativa através do **Swagger (OpenAPI)**.
 
 Após iniciar a aplicação, o Swagger pode ser acessado em:
-https://localhost:{porta}/swagger
+http://localhost:5266/swagger
 
 No Swagger é possível:
 - Visualizar todos os endpoints disponíveis
@@ -19,10 +19,9 @@ No Swagger é possível:
 ## Documentação para execução do projeto
 ### Pré-requisitos
 
-- **.NET SDK 10** (conforme versão do projeto)
-- **Docker** e **Docker Compose**
+- **.NET SDK 10**
+- **Docker** e **Docker Compose** para subir e utilizar o banco de dados
 - **SQLServer**
-- (Opcional) DBeaver ou outro cliente SQL para inspeção do banco
 
 ---
 
@@ -30,7 +29,7 @@ No Swagger é possível:
 
 #### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seu-usuario/BankSys.git
+git clone https://github.com/RafaelVinicius-97/BankSys.git
 ```
 #### 2. Subir o banco de dados com Docker Compose
 ```bash
